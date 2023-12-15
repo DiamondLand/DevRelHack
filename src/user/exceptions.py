@@ -10,3 +10,15 @@ class ErrorUsernameNotFound(HTTPException):
             'message': 'User not found',
             'ru_message': 'Пользователь не найден'
         })
+
+class ErrorUserNotAdmin(HTTPException):
+    """
+    Исключение, сигнализирующее о том, что пользователь не явялется администратором.
+    """
+    def __init__(self):
+        super().__init__(status_code=404, detail={
+            'code': 7,
+            'message': 'You are not administrator',
+            'ru_message': 'Вы не являетесь администратором'
+        })
+
