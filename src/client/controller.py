@@ -5,8 +5,3 @@ from fastapi.responses import HTMLResponse
 client = APIRouter()
 
 templates = Jinja2Templates(directory="public/templates")
-
-@client.get('/ping')
-async def ping(r: Request):
-    return templates.TemplateResponse('pong.html', {'request': r, 'ip': r.client.host})
-
