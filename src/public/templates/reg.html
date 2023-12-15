@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href=""/>
+	<title>reg</title>
+	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body style="overflow: hidden">
+	
+	<div id="reg-section">
+		<div class="wrapper">
+			<form action="" class="reg__form">
+				<p class="reg__form-t">Форма регистрации</p>
+				<div class="reg__form-inpts">
+					<input class="inpt__stroke" type="name" name="username" placeholder="Ваш псевдоним" maxlength="32" autocomplete="on" tabindex="1" title="Ваш псевдоним не должен быть длиннее чем 32 символа" required>
+					<div class="reg__form-inpts-grp">
+						<input type="name" name="name" placeholder="Ваше имя"maxlength="32" pattern="[А-Яа-яA-Za-z]{1,32}" autocomplete="on" tabindex="2" title="Ваше имя не должно содержать цифры и быть длиннее чем 32 символа" required>
+						<input type="name" name="name" placeholder="Ваша фамилия" maxlength="32" pattern="[А-Яа-яA-Za-z]{1,32}" autocomplete="on" tabindex="3" title="Ваша фамилия не должна содержать цифры и быть длиннее чем 32 символа" required>
+						<input type="name" name="name" placeholder="Ваше отчество" maxlength="32" pattern="[А-Яа-яA-Za-z]{1,32}" autocomplete="on" tabindex="4" title="Ваше отчество не должно содержать цифры и быть длиннее чем 32 символа">
+					</div>
+					<input class="inpt__stroke" type="email" name="email" placeholder="Почта" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="on" tabindex="5" required>
+					<div class="reg__form-inpts-grp">
+						<input id="password1" type="password" name="password" placeholder="Пароль" minlength="6" maxlength="24" tabindex="6" title="Ваш пароль должен быть не меньше 6 и не больше 24 символов" required>
+						<input id="password2" type="password" name="password" placeholder="Повторите пароль" minlength="6" maxlength="24" tabindex="7" title="Ваш пароль должен быть не меньше 6 и не больше 24 символов" required>
+					</div>
+					<div class="reg__form-inpts-grp">
+						<input type="text" name="work" placeholder="Место работы" pattern="^[A-Za-zА-Яа-я0-9\s\.,\-]+" tabindex="8" title="В этом поле доступны только эти знаки: . , - /" required>
+						<input type="text" name="age" placeholder="Дата рождения" maxlength="10"pattern = "^(19|20)\d{2}[\s\.\-](0[1-9]|1[0-2])[\s\.\-](0[1-9]|[12][0-9]|3[01])$" tabindex="9" title="Дата рождения записывается в таком формате: год.месяц.день" required>
+					</div>
+					<div class="reg__form-radios">
+						<p>Ваш пол</p>
+						<div class="reg__form-radios-grp">
+							<div>
+								<input type="radio" id="male" name="drone">
+								<label for="male">Мужской</label>
+							</div>
+							<div>
+								<input type="radio" id="famale" name="drone">
+								<label for="famale">Женский</label>
+							</div>
+							<div>
+								<input type="radio" id="radio" name="drone">
+								<label for="radio">Предпочитаю не говорить</label>
+							</div>
+						</div>
+					</div>
+					<input class="inpt__stroke" type="text" name="country" placeholder="Ваша страна" pattern="[А-Яа-яA-Za-z]{1,32}" autocomplete="on" tabindex="10" title="В этом поле запрещено использование символов" required>
+				</div>
+				<button class="btn-1" type="submit"><span>Зарегистрироваться</span></button>
+			</form>
+		</div>
+	</div>
+
+	<script src="../static/js/app.js"></script>
+
+</body>
+</html>

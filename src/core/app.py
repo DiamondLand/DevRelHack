@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
-from core.lines import count as CL
 from core.db import init_db
 from client.controller import client
 from user.controller import user
@@ -34,8 +33,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-print(len(app.routes))
 app.title = 'Dev.Rel.Hack.2.0'
-app.description = f'''Backend developer tg/vk @allelleo\n
-Count of routes: {len(app.routes)}\n
-Count of lines: {CL()}\n'''
+app.description = f'''Backend developers tg/vk @allelleo | @ivan_abutkov\n
+Count of routes: {len(app.routes)}\n'''
