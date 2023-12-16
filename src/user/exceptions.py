@@ -6,7 +6,7 @@ class ErrorUsernameNotFound(HTTPException):
     """
     def __init__(self):
         super().__init__(status_code=404, detail={
-            'code': 6,
+            'code': 7,
             'message': 'User not found',
             'ru_message': 'Пользователь не найден'
         })
@@ -17,7 +17,7 @@ class ErrorUserNotAdmin(HTTPException):
     """
     def __init__(self):
         super().__init__(status_code=404, detail={
-            'code': 7,
+            'code': 8,
             'message': 'You are not administrator',
             'ru_message': 'Вы не являетесь администратором'
         })

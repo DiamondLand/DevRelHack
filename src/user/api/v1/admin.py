@@ -77,6 +77,7 @@ async def update_username(request: Request, username: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление имени пользователя.
     """
+    
     user = await models.User.get(id=user_id)
     if await oauth_utils.check_username(username):
         raise oauth_exceptions.ErrorUniqueUsername
@@ -99,6 +100,7 @@ async def update_email(request: Request, email: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление адреса электронной почты.
     """
+    
     user = await models.User.get(id=user_id)
     if await oauth_utils.check_email(email):
         raise oauth_exceptions.ErrorUniqueEmail
@@ -121,6 +123,7 @@ async def update_first_name(request: Request, first_name: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление имени пользователя.
     """
+
     user = await models.User.get(id=user_id)
     user.first_name = first_name
     await user.save()
@@ -140,6 +143,7 @@ async def update_last_name(request: Request, last_name: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление фамилии пользователя.
     """
+
     user = await models.User.get(id=user_id)
     user.last_name = last_name
     await user.save()
@@ -159,6 +163,7 @@ async def update_middle_name(request: Request, middle_name: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление отчества пользователя.
     """
+
     user = await models.User.get(id=user_id)
     user.middle_name = middle_name
     await user.save()
@@ -178,6 +183,7 @@ async def update_age(request: Request, age: datetime.datetime, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление возраста пользователя.
     """
+
     user = await models.User.get(id=user_id)
     user.age = age
     await user.save()
@@ -197,6 +203,7 @@ async def update_sex(request: Request, sex: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление пола пользователя.
     """
+
     user = await models.User.get(id=user_id)
     user.sex = sex
     await user.save()
@@ -216,6 +223,7 @@ async def update_county(request: Request, county: str, user_id: int,
 
     :return: Словарь с ключом 'status', указывающим на успешное обновление страны пользователя.
     """
+
     user = await models.User.get(id=user_id)
     user.country = county
     await user.save()
